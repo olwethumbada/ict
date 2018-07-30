@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import org.json.JSONException;
@@ -21,15 +22,28 @@ import java.util.jar.Attributes;
 
 public class topic extends AppCompatActivity {
 
-    String NAME[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic);
 
 
-BackGround b = new BackGround();
-b.execute();
+        BackGround b = new BackGround();
+        b.execute();
+
+        for (int i = 0; i < b.NAME.length; i++){
+            Button myButton = new Button(this);
+            myButton.setText(b.NAME[i]);
+            //myButton.setId();
+
+            LinearLayout ll = (LinearLayout)findViewById(R.id.llCategory);
+
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            ll.addView(myButton, lp);
+        }
+
+
         /*Button myButton = new Button(this);
         myButton.setText("Add Me");
 
@@ -39,6 +53,7 @@ b.execute();
     }
     class BackGround extends AsyncTask<String, String, String> {
         String err = null;
+        String NAME[];
 
         @Override
         protected String doInBackground(String... params) {
@@ -71,16 +86,15 @@ b.execute();
                 String G[];
 
                 G = data.split("#");
+                NAME = new String[G.length];
 
                 for(int i = 0; i < G.length; i++){
 
                 JSONObject root = new JSONObject(G[i]);
                 JSONObject user_data = root.getJSONObject("user_data");
-
-
-                    NAME = new String[G.length];
-                    NAME[i] = user_data.getString("Name");
+                NAME[i] = user_data.getString("Name");
                 }
+                return NAME[G.length];
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 return "Exception: " + e.getMessage();
@@ -89,10 +103,8 @@ b.execute();
                 return "Exception: " + e.getMessage();
             }catch (JSONException e) {
                 e.printStackTrace();
-                err = "Exception: " + e.getMessage();
+                return "Exception: " + e.getMessage();
             }
-
-            return NAME[0];
         }
 
         @Override
