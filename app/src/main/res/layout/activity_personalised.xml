@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".personalised">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:background="@color/navy">
+
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/personalised"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tvID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/bPBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/time_table" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_weight="8"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:padding="14sp">
+
+        <!-- Column 1
+             Row 1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:cardElevation="8sp"
+            app:cardCornerRadius="8sp" tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="120sp">
+
+
+                <ImageButton
+                    android:id="@+id/ibTimetable"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/time_table"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timetable"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"/>
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2
+             Row 1-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:cardElevation="8sp"
+            app:cardCornerRadius="8sp" tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibInformation"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/info"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+            <TextView
+                android:text="@string/information"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 1
+             Row 2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:cardElevation="8sp"
+            app:cardCornerRadius="8sp" tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibExam"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/exam"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+            <TextView
+                android:text="@string/exam"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2
+             Row 2-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:cardElevation="8sp"
+            app:cardCornerRadius="8sp" tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibModule"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/module"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+            <TextView
+                android:text="@string/module"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 1
+             Row 3-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:cardElevation="8sp"
+            app:cardCornerRadius="8sp" tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibForum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="Forum"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/forum" />
+
+            </LinearLayout>
+            <TextView
+                android:text="@string/forum"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2
+             Row 3-->
+        <android.support.v7.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            app:cardElevation="8sp"
+            app:cardCornerRadius="8sp" tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16sp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/ibProfile"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/profile"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+            <TextView
+                android:text="@string/profile"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </android.support.v7.widget.CardView>
+    </GridLayout>
+
+</LinearLayout>

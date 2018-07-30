@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ict</string>
+    <string name="timetable">Time-Table</string>
+    <string name="information">Information</string>
+    <string name="exam">Exam Time-Table</string>
+    <string name="module">Modules</string>
+    <string name="forum">Forum</string>
+    <string name="profile">Profile</string>
+    <string name="personalised">Personalised</string>
+    <string name="back">Back</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="topic">Topic</string>
+</resources>

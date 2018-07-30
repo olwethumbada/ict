@@ -1,0 +1,4 @@
+#Mon Jul 30 11:58:03 CAT 2018
+base.0=C\:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.0=classes.dex
+renamed.0=classes.dex
