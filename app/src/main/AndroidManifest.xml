@@ -25,7 +25,10 @@
         </activity>
         <activity android:name=".personalised" />
         <activity android:name=".forum" />
-        <activity android:name=".topic"></activity>
+        <activity android:name=".topic" />
+        <activity android:name=".Admin_home" />
+        <activity android:name=".Admin_category" />
+        <activity android:name=".add_category"></activity>
     </application>
 
 </manifest>

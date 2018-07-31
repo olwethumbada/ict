@@ -34,6 +34,9 @@
         <activity android:name="com.example.onward.ict.personalised" />
         <activity android:name="com.example.onward.ict.forum" />
         <activity android:name="com.example.onward.ict.topic" />
+        <activity android:name="com.example.onward.ict.Admin_home" />
+        <activity android:name="com.example.onward.ict.Admin_category" />
+        <activity android:name="com.example.onward.ict.add_category" />
     </application>
 
 </manifest>

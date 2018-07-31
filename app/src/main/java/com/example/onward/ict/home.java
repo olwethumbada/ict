@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,12 +19,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class home extends AppCompatActivity {
+public class home extends AppCompatActivity implements View.OnClickListener {
 
     EditText name, password;
     String Name, Password;
-    Context ctx=this;
-    String NAME=null, PASSWORD=null, EMAIL=null;
+    Context context = this;
+    String NAME = null, ROLE = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,17 @@ public class home extends AppCompatActivity {
         password = (EditText) findViewById(R.id.main_password);
     }
 
-    public void main_login(View v){
-        Name = name.getText().toString();
-        Password = password.getText().toString();
-        BackGround b = new BackGround();
-        b.execute(Name, Password);
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.main_login:
+                    Name = name.getText().toString();
+                    Password = password.getText().toString();
+                    BackGround b = new BackGround();
+                    b.execute(Name, Password);
+                break;
+        }
     }
 
     class BackGround extends AsyncTask<String, String, String> {
@@ -52,7 +59,7 @@ public class home extends AppCompatActivity {
 
             try {
                 URL url = new URL("http://10.102.139.130/Android/login.php");
-                String urlParams = "username=" + username +"&"+ "password=" + password;
+                String urlParams = "username=" + username + "&" + "password=" + password;
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setDoOutput(true);
@@ -86,18 +93,23 @@ public class home extends AppCompatActivity {
                 JSONObject root = new JSONObject(s);
                 JSONObject user_data = root.getJSONObject("user_data");
                 NAME = user_data.getString("StudentNo");
-                PASSWORD = user_data.getString("Name");
-                EMAIL = user_data.getString("Role");
+                ROLE = user_data.getString("Role");
             } catch (JSONException e) {
                 e.printStackTrace();
                 err = "Exception: " + e.getMessage();
             }
 
-            Intent i = new Intent(ctx, personalised.class);
-            i.putExtra("name", NAME);
-            i.putExtra("err", err);
-            startActivity(i);
+            Intent user = new Intent(context, personalised.class);
+            Intent admin = new Intent(context, Admin_home.class);
 
+            user.putExtra("name", NAME);
+            user.putExtra("err", err);
+
+            if (ROLE.contains("Admin")) {
+                startActivity(admin);
+            } else {
+                startActivity(user);
+            }
         }
     }
-    }
+}

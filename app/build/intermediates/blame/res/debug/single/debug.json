@@ -60,6 +60,10 @@
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_add.png.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\drawable-xxhdpi\\add.png"
+    },
+    {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\drawable-xhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
@@ -448,6 +452,10 @@
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_add.png.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\drawable-xhdpi\\add.png"
+    },
+    {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
@@ -738,6 +746,10 @@
     {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_category.xml.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\layout\\activity_add_category.xml"
     },
     {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item.xml.flat",
@@ -1056,6 +1068,10 @@
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\color-v21\\abc_btn_colored_borderless_text_material.xml"
     },
     {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_add.png.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\drawable-xxxhdpi\\add.png"
+    },
+    {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
@@ -1120,6 +1136,10 @@
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_add.png.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\drawable-hdpi\\add.png"
+    },
+    {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_dark.xml.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\color\\abc_primary_text_material_dark.xml"
     },
@@ -1146,6 +1166,10 @@
     {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_topic.xml.flat",
         "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\layout\\activity_topic.xml"
+    },
+    {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_admin_home.xml.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\layout\\activity_admin_home.xml"
     },
     {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -1600,6 +1624,10 @@
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_admin_category.xml.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\layout\\activity_admin_category.xml"
+    },
+    {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_color_highlight_material.xml.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\color-v23\\abc_color_highlight_material.xml"
     },
@@ -1854,6 +1882,10 @@
     {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
         "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_add.png.flat",
+        "source": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\src\\main\\res\\drawable-mdpi\\add.png"
     },
     {
         "merged": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\res\\merged\\debug\\layout_support_simple_spinner_dropdown_item.xml.flat",

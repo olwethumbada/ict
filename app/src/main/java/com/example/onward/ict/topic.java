@@ -1,9 +1,11 @@
 package com.example.onward.ict;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -20,36 +22,43 @@ import java.net.URL;
 import java.sql.Array;
 import java.util.jar.Attributes;
 
-public class topic extends AppCompatActivity {
-
+public class topic extends AppCompatActivity implements View.OnClickListener {
+    LinearLayout parent;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_topic);
 
+        parent = (LinearLayout)findViewById(R.id.llCategory);
+        Button myButton;
+        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-        BackGround b = new BackGround();
-        b.execute();
+        try{
+            BackGround b = new BackGround();
+            b.execute();
 
-        for (int i = 0; i < b.NAME.length; i++){
-            Button myButton = new Button(this);
-            myButton.setText(b.NAME[i]);
-            //myButton.setId();
 
-            LinearLayout ll = (LinearLayout)findViewById(R.id.llCategory);
+            for (int i = 0; i < b.NAME.length; i++){
 
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            ll.addView(myButton, lp);
+                myButton = new Button(this);
+                myButton.setText(b.NAME[i]);
+
+                parent.addView(myButton);
+                myButton.setOnClickListener(topic.this);
+            }
+        }catch (Exception e){
+            progressDialog.setMessage(e.getMessage());
+            progressDialog.show();
         }
 
 
-        /*Button myButton = new Button(this);
-        myButton.setText("Add Me");
+    }
 
-        RelativeLayout ll = (RelativeLayout) findViewById(R.id.rlTopics);
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        ll.addView(myButton, lp);*/
+    @Override
+    public void onClick(View view) {
+
     }
     class BackGround extends AsyncTask<String, String, String> {
         String err = null;
@@ -109,24 +118,7 @@ public class topic extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            String err = null;
-            try {
-                JSONObject root = new JSONObject(s);
-                JSONObject user_data = root.getJSONObject("user_data");
-int o = user_data.length();
-                for(int i = 0; i < user_data.length(); i++){
-                    NAME[i] = user_data.getString("Name");
-                }
 
-            } catch (JSONException e) {
-                e.printStackTrace();
-                err = "Exception: " + e.getMessage();
-            }
-
-            //Intent i = new Intent(ctx, personalised.class);
-            //i.putExtra("name", NAME);
-            //i.putExtra("err", err);
-            //startActivity(i);
 
         }
     }
