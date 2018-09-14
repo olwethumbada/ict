@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -22,9 +23,9 @@ import java.net.URL;
 public class home extends AppCompatActivity implements View.OnClickListener {
 
     EditText name, password;
+    TextView error;
     String Name, Password;
     Context context = this;
-    String NAME = null, ROLE = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +41,21 @@ public class home extends AppCompatActivity implements View.OnClickListener {
 
         switch (v.getId()){
             case R.id.main_login:
+
+                if (name.getText().toString().matches(""))
+                    Toast.makeText(this, "You did not enter a Username", Toast.LENGTH_SHORT).show();
+                else if (password.getText().toString().matches(""))
+                    Toast.makeText(this, "You did not enter a Password", Toast.LENGTH_SHORT).show();
+                else {
                     Name = name.getText().toString();
                     Password = password.getText().toString();
                     BackGround b = new BackGround();
-                    b.execute(Name, Password);
+                    b.execute(Name.trim(), Password.trim());
+                    break;
+                }
                 break;
+            case R.id.bBack:
+                startActivity(new Intent(context, main.class));
         }
     }
 
@@ -58,8 +69,8 @@ public class home extends AppCompatActivity implements View.OnClickListener {
             int tmp;
 
             try {
-                URL url = new URL("http://10.102.139.130/Android/login.php");
-                String urlParams = "username=" + username + "&" + "password=" + password;
+                URL url = new URL("http://sict-iis.nmmu.ac.za/sos/Android/login.php");
+                String urlParams = "studentNo=" + username + "&" + "password=" + password;
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setDoOutput(true);
@@ -89,26 +100,27 @@ public class home extends AppCompatActivity implements View.OnClickListener {
         @Override
         protected void onPostExecute(String s) {
             String err = null;
-            try {
-                JSONObject root = new JSONObject(s);
-                JSONObject user_data = root.getJSONObject("user_data");
-                NAME = user_data.getString("StudentNo");
-                ROLE = user_data.getString("Role");
-            } catch (JSONException e) {
-                e.printStackTrace();
-                err = "Exception: " + e.getMessage();
-            }
+            String pass = password.getText().toString();
 
-            Intent user = new Intent(context, personalised.class);
-            Intent admin = new Intent(context, Admin_home.class);
+            if(s.equals("Bind successful"))
+            {
+                Intent user = new Intent(context, personalised.class);
+                Intent pop = new Intent(context, login_popup.class);
 
-            user.putExtra("name", NAME);
-            user.putExtra("err", err);
+                pop.putExtra("password", pass);
+                pop.putExtra("name", Name.substring(0,10));
 
-            if (ROLE.contains("Admin")) {
-                startActivity(admin);
-            } else {
-                startActivity(user);
+                user.putExtra("password", pass);
+                user.putExtra("name", Name.substring(0,10));
+
+                if (Name.substring(1,10).contains("214221431")) {
+                    startActivity(pop);
+                } else {
+                    startActivity(user);
+                }
+
+            }else {
+                Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
             }
         }
     }

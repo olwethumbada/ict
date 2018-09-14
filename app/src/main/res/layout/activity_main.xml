@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/red"
+    tools:context=".main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="@string/head"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal" />
+
+
+            <ImageButton
+                android:id="@+id/ibLogin"
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:background="@drawable/circle_pbutton"
+                android:onClick="onClick"
+
+                app:srcCompat="@drawable/loc" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingRight="10sp"
+            android:paddingLeft="20sp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School of Information and communication Technology"
+            android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10sp"
+        android:background="@drawable/back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10sp"
+            android:paddingRight="2sp"></LinearLayout>
+        <ImageButton
+            android:id="@+id/ibFaq"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circle_pbutton"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/faq"
+            android:layout_marginLeft="40sp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibFaq"
+            android:text="@string/faq"
+            android:layout_marginStart="75sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="90sp" />
+
+        <!-- Column 2
+             Row 1-->
+        <ImageButton
+            android:id="@+id/ibMaps"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/ibFaq"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/circle_pbutton"
+            android:contentDescription="@string/app_name"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/map"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp" />
+
+        <TextView
+            android:id="@+id/tvMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibMaps"
+            android:text="@string/map"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="75sp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="95sp" />
+
+        <!-- Column 1
+             Row 2-->
+
+        <ImageButton
+            android:id="@+id/ibEmergency"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="130sp"
+            android:layout_marginStart="40sp"
+            android:background="@drawable/circle_pbutton"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/emergency"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ibFaq"
+            android:layout_below="@+id/ibEmergency"
+            android:layout_marginTop="-130sp"
+            android:text="@string/emergency"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignLeft="@+id/ibFaq" />
+
+        <!-- Column 2
+             Row 2-->
+
+        <ImageButton
+            android:id="@+id/ibOrientation"
+            android:layout_width="85sp"
+            android:layout_height="85sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="130sp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/circle_pbutton"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/orientation"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp" />
+
+        <TextView
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ibMaps"
+            android:layout_below="@+id/ibEmergency"
+            android:layout_marginTop="-130sp"
+            android:text="@string/orientation"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_alignLeft="@+id/ibMaps" />
+
+        <ImageButton
+            android:id="@+id/fbFacebook"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end|bottom"
+            android:onClick="onClick"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/circle_pbutton"
+            android:src="@drawable/fb" />
+
+
+    </RelativeLayout>
+</LinearLayout>

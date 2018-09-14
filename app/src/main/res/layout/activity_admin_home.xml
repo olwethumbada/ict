@@ -21,16 +21,10 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="@string/admin"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black" />
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/bPBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/app_name"
-            android:textColor="@color/black"
-            app:srcCompat="@drawable/time_table" />
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,17 +39,23 @@
             android:contentDescription="@string/app_name"
             android:onClick="onClick"
             android:text="@string/discuss"
-            android:textColor="@color/black"
-            app:srcCompat="@drawable/time_table" />
+            android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/bStaff"
+        android:id="@+id/bStaff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/staff"
+        android:contentDescription="@string/app_name" />
+
+        <Button
+            android:id="@+id/bEmergencyAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="@string/staff"
-            android:contentDescription="@string/app_name"
-            app:srcCompat="@drawable/time_table" />
+            android:text="@string/emergency_contacts"
+            android:contentDescription="@string/app_name" />
 
     </LinearLayout>
 </LinearLayout>

@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:orientation="vertical"
-    android:background="@color/navy"
+    android:background="@color/white"
     tools:context=".topic">
 
-    <Button
-        android:id="@+id/bBack"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textAlignment="gravity"
-        android:text="@string/back"
-        android:contentDescription="@string/app_name" />
+        android:background="@color/red"
+        android:textAlignment="center"
+        android:id="@+id/rlDisc">
+
+        <Button
+            android:id="@+id/bBackDisc"
+            android:layout_width="60sp"
+            android:layout_height="37sp"
+            android:background="@color/red"
+            android:drawableLeft="@drawable/goback"
+            android:textSize="14sp"
+            android:contentDescription="@string/app_name"
+            android:onClick="onClick"
+            android:textAlignment="gravity"
+             />
 
     <TextView
         android:id="@+id/tvCategory"
@@ -24,27 +33,21 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/category"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textColor="@color/white"
         android:textStyle="bold" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true">
-
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlDisc">
         <LinearLayout
-            android:id="@+id/llCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-
-        </LinearLayout>
+            android:orientation="vertical"
+            android:id="@+id/llTopicMain"/>
     </ScrollView>
 
 
-</LinearLayout>
+</RelativeLayout>

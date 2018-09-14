@@ -16,19 +16,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".home">
+        <activity android:name=".home" />
+        <activity android:name=".personalised" />
+        <activity android:name=".forum" />
+        <activity android:name=".topic" />
+        <activity android:name=".Admin_home" />
+        <activity android:name=".Admin_category" />
+        <activity android:name=".add_category" />
+        <activity
+            android:name=".north_map"
+            android:screenOrientation="portrait" />
+        <activity android:name=".main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".personalised" />
-        <activity android:name=".forum" />
-        <activity android:name=".topic" />
-        <activity android:name=".Admin_home" />
-        <activity android:name=".Admin_category" />
-        <activity android:name=".add_category"></activity>
+        <activity android:name=".admin_staff" />
+        <activity
+            android:name=".login_popup"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity android:name=".comments" />
+        <activity android:name=".emergency" />
+        <activity android:name=".add_staff" />
+        <activity android:name=".profile" />
+        <activity android:name=".module" />
+        <activity android:name=".module_details" />
     </application>
 
 </manifest>

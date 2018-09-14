@@ -36,22 +36,28 @@ public class add_category extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.bSubmit:
-                Name = name.getText().toString();
-                Description = description.getText().toString();
+                if(name.getText().equals("")) {
+                    Toast.makeText(this,"Type in the category name", Toast.LENGTH_SHORT).show();
+                } else if(description.getText().equals("")){
+                    Toast.makeText(this,"Type in the description of the category", Toast.LENGTH_SHORT).show();
+                } else{
 
-                BackGround b = new BackGround();
-                b.execute(Name, Description);
+                    Name = name.getText().toString();
+                    Description = description.getText().toString();
 
-                name.setText("");
-                description.setText("");
+                    BackGround b = new BackGround();
+                    b.execute(Name, Description);
 
-                startActivity(new Intent(context, Admin_category.class));
+                    name.setText("");
+                    description.setText("");
+
+                    startActivity(new Intent(context, Admin_category.class));
+                }
                 break;
             case R.id.acBack:
                 startActivity(new Intent(context, Admin_category.class));
                 break;
         }
-
     }
 
     class BackGround extends AsyncTask<String, String, String> {
@@ -64,7 +70,7 @@ public class add_category extends AppCompatActivity implements View.OnClickListe
             int tmp;
 
             try {
-                URL url = new URL("http://10.102.139.130/Android/addCategory.php");
+                URL url = new URL("http://sict-iis.nmmu.ac.za/sos/Android/addCategory.php");
                 String urlParams = "name=" + name + "&description=" + description;
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();

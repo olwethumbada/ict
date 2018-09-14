@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">ict</string>
+    <string name="app_name">SICT SoS</string>
     <string name="timetable">Time-Table</string>
     <string name="information">Information</string>
     <string name="exam">Exam Time-Table</string>
+    <string name="map">Map</string>
+    <string name="faq">Faq</string>
+    <string name="orientation">Orientation </string>
+    <string name="emergency">Emergency</string>
     <string name="module">Modules</string>
+    <string name="questions">Forum</string>
     <string name="forum">Forum</string>
     <string name="profile">Profile</string>
     <string name="personalised">Personalised</string>
@@ -19,4 +24,22 @@
     <string name="category_name">Category Name</string>
     <string name="description">Description</string>
     <string name="submit">Submit</string>
+    <string name="link">
+        <a href="">Click here: </a>to go to How to Buddy Maps
+    </string>
+    <string name="head">NMU</string>
+    <string name="user">Hint: Username only (s201234567)</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="staff_list">Staff List</string>
+    <string name="login_as">Login As</string>
+    <string name="login_user">User</string>
+    <string name="logiin_admin">Admin</string>
+    <string name="emergency_list">Emergency Contact List</string>
+    <string name="add_staff">Add Staff</string>
+    <string name="module_details">Module details</string>
+    <string name="office">Office        </string>
+    <string name="email">E-mail         </string>
+    <string name="office_no">Office no.</string>
 </resources>

@@ -24,19 +24,33 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.onward.ict.home" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name="com.example.onward.ict.home" />
         <activity android:name="com.example.onward.ict.personalised" />
         <activity android:name="com.example.onward.ict.forum" />
         <activity android:name="com.example.onward.ict.topic" />
         <activity android:name="com.example.onward.ict.Admin_home" />
         <activity android:name="com.example.onward.ict.Admin_category" />
         <activity android:name="com.example.onward.ict.add_category" />
+        <activity
+            android:name="com.example.onward.ict.north_map"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.onward.ict.main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.onward.ict.admin_staff" />
+        <activity
+            android:name="com.example.onward.ict.login_popup"
+            android:theme="@style/AppTheme.PopMe" />
+        <activity android:name="com.example.onward.ict.comments" />
+        <activity android:name="com.example.onward.ict.emergency" />
+        <activity android:name="com.example.onward.ict.add_staff" />
+        <activity android:name="com.example.onward.ict.profile" />
+        <activity android:name="com.example.onward.ict.module" />
+        <activity android:name="com.example.onward.ict.module_details" />
     </application>
 
 </manifest>

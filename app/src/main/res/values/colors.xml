@@ -4,6 +4,14 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
-    <color name="navy">#000080</color>
+    <color name="navy">#001f7f</color>
+    <color name="darkblue">#1A237E</color>
+    <color name="ghost_white">#F8F8FF</color>
     <color name="black">#000000</color>
+    <color name="red">#0b0254</color>
+    <color name="sky_blue">#87CEEB</color>
+    <color name="gray">#d7d7d7</color>
+    <color name="green">#00c600</color>
+    <color name="blue">#9499b7</color>
+    <color name="editText">#514c86</color>
 </resources>

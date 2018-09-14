@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class personalised extends AppCompatActivity {
+public class personalised extends AppCompatActivity implements View.OnClickListener {
 
-    String userID;
+    String getUserID, getUserPass;
     TextView tvUserID;
 
     @Override
@@ -18,12 +18,45 @@ public class personalised extends AppCompatActivity {
 
         tvUserID = (TextView) findViewById(R.id.tvID);
 
-        userID = getIntent().getStringExtra("name");
+        final  String userID = getIntent().getStringExtra("name");
+        final String password = getIntent().getStringExtra("password");
 
+        getUserID = userID;
+        getUserPass = password;
         tvUserID.setText(userID);
     }
 
     public void Forum(View v){
-        startActivity(new Intent(personalised.this, topic.class));
+        Intent user = new Intent(this, topic.class);
+        user.putExtra("student", getUserID);
+        startActivity(user);
+    }
+    public void Profile(View v){
+        Intent user = new Intent(this, profile.class);
+        user.putExtra("studentNo", getUserID);
+        startActivity(user);
+    }
+    public void Module(View v){
+        Intent user = new Intent(this, module.class);
+        user.putExtra("studentNo", getUserID);
+        startActivity(user);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent in = new Intent(this,main.class);
+        in.putExtra("studentNo", getUserID);
+        in.putExtra("password", getUserPass);
+        switch (v.getId()){
+           case R.id.bHome:
+               startActivity(in);
+               break;
+            case R.id.bLogout:
+                in.replaceExtras(new Bundle());
+                in.setAction("");
+                in.setData(null);
+                in.setFlags(0);
+                startActivity(in);
+        }
     }
 }

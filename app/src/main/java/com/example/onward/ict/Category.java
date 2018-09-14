@@ -11,8 +11,16 @@ public class Category {
         Name = name;
     }
 
+    public String Id;
     public String Name;
-    private String Description;
+    public String Description;
 
+    public Category(String Id, String Name, String Description){
+        this.Id = Id;
+        this.Name = Name;
+        this.Description = Description;
+    }
+    public Category(){
 
+    }
 }

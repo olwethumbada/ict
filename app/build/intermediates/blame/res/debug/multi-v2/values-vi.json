@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\s214221431\\Downloads\\Android\\ict\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-vi\\values-vi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6e52f5d2c756c64bb1837431b6c97a88\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a965e2d23ab5f6086ed47b9f658eed5f\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\32736331b4a81b7e7ed00ae460d683f6\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\s214221431\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\e88d54241ec0b8b2fe886868a5f613e1\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
