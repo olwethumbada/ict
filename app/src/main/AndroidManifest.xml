@@ -3,6 +3,11 @@
     package="com.example.onward.ict">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -17,7 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".home" />
-        <activity android:name=".personalised" />
+        <activity
+            android:name=".personalised"
+            android:theme="@style/AppPersonal" />
         <activity android:name=".forum" />
         <activity android:name=".topic" />
         <activity android:name=".Admin_home" />
@@ -41,8 +48,21 @@
         <activity android:name=".emergency" />
         <activity android:name=".add_staff" />
         <activity android:name=".profile" />
-        <activity android:name=".module" />
         <activity android:name=".module_details" />
+        <activity
+            android:name=".users"
+            android:label="@string/title_activity_users"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".rate" />
+        <activity android:name=".update_staff" />
+        <activity android:name=".staff_action" />
+        <activity android:name=".main_help" />
+        <activity android:name=".admin_category_action" />
+        <activity android:name=".question_forum" />
+        <activity android:name=".admin_students" />
+        <activity android:name=".report" />
+        <activity android:name=".student_list" />
+        <activity android:name=".user_feedback"/>
     </application>
 
 </manifest>
